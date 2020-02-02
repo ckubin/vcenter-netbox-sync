@@ -1019,6 +1019,10 @@ class NetBoxHandler:
                             "on."
                             )
                 if update_object:
+                    log.info(
+                        "Setting NetBox '%s' object primary IP to %s.",
+                        nb_obj_name, new_pri_ip["address"]
+                        )
                     ip_version = str(
                         "primary_ip{}".format(
                             ip_network(
